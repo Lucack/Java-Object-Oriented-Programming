@@ -1,4 +1,6 @@
-public class Account {
+ package bank;
+ 
+ class Account {
 
     String number;
     String name;
