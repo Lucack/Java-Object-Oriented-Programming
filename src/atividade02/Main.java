@@ -1,6 +1,10 @@
 package atividade02;
 
 public class Main {
+
+    
+
+        
     public static void main(String[] args) {
          Complexo numero1 = new Complexo(1, 2);
          Complexo numero2 = new Complexo(3, 4);
@@ -22,5 +26,7 @@ public class Main {
          Complexo divisao = numero1.divide(numero2);
 
          System.out.println("c1 / c2 = " + divisao.converteParaString());
+
+
     }
 }
