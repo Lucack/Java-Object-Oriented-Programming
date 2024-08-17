@@ -15,18 +15,19 @@ public class Matrix {
         }
     }
 
+
     @Override
     public String toString() {
         StringBuilder a = new StringBuilder();
         for (int i = 0; i < this.getRows(); i++) {
             for (int j = 0; j < this.getColumns(); j++) {
-                a.append(this.cells[i][j]).append(" ");
+                a.append(String.format("%10.6f", this.cells[i][j]));
             }
             a.append("\n");
         }
         return a.toString();
     }
-
+    
     public double[][] toArray() {
         double[][] result = new double[this.getRows()][this.getColumns()];
 
