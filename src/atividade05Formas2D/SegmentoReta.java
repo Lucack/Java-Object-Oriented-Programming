@@ -1,26 +1,34 @@
 package atividade05Formas2D;
 
 public class SegmentoReta extends ObjetoGeometrico {
-    
-    public SegmentoReta(Ponto p1, Ponto p2){
+    private final Ponto p1;
+    private final Ponto p2;
 
+    public SegmentoReta(Ponto p1, Ponto p2) {
+        this.p1 = p1;        
+        this.p2 = p2;
     }
 
-    private double comprimento(){
-        return 0;
+    private double comprimento() {
+        double cateto1 = this.p2.getCoordX() - this.p1.getCoordX();
+        double cateto2 = this.p2.getCoordY() - this.p1.getCoordY();
+        return Math.sqrt(cateto1 * cateto1 + cateto2 * cateto2);
     }
 
-    private double coeficienteAngular(){
-        // O coeficiente angulara mede a inclinação da reta
-// em relação ao eixo x. Caso a reta seja paralela ao eixo y (coeficiente indefinido), retorna
-// Double.POSITIVE_INFINITY.
-        return 0;
+    private double coeficienteAngular() {
+        
+        double catetox = this.p2.getCoordX() - this.p1.getCoordX();
+        double catetoy = this.p2.getCoordY() - this.p1.getCoordY();
+
+        if (catetox == 0) {
+            return Double.POSITIVE_INFINITY;
+        }
+
+        return catetoy / catetox;
     }
 
-    private boolean paralelo(SegmentoReta s){
-//         Verifica se a linha onde passa o segmento de reta atual é paralela à linha onde passa o
-// segmento de reta s.
+    private boolean paralelo(SegmentoReta s) {
 
-        return true;
+        return this.coeficienteAngular() == s.coeficienteAngular();
     }
 }
