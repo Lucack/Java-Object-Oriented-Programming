@@ -12,7 +12,7 @@ public class SegmentoReta extends ObjetoGeometrico {
     public Ponto getP1() {
         return p1;
     }
-    
+
     public Ponto getP2() {
         return p2;
     }
@@ -28,7 +28,7 @@ public class SegmentoReta extends ObjetoGeometrico {
         double catetox = this.p2.getCoordX() - this.p1.getCoordX();
         double catetoy = this.p2.getCoordY() - this.p1.getCoordY();
 
-        if (catetox == 0) {
+        if (catetox == 0 || catetoy == 0) {
             return Double.POSITIVE_INFINITY;
         }
 
@@ -36,7 +36,7 @@ public class SegmentoReta extends ObjetoGeometrico {
     }
 
     public boolean paralelo(SegmentoReta s) {
-
-        return this.coeficienteAngular() == s.coeficienteAngular();
+        double delta = 0.00001; 
+        return Math.abs(this.coeficienteAngular() - s.coeficienteAngular()) < delta;
     }
 }

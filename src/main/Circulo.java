@@ -36,7 +36,7 @@ public class Circulo extends Elipse {
 
     @Override
     public double area() {
-        return 2 * Math.PI * raio* raio;
+        return Math.PI * raio* raio;
     }
 
     @Override
