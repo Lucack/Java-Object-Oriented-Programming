@@ -53,10 +53,5 @@ public class Trapezio extends Quadrilatero {
         return baseMaior().comprimento();
     }
 
-    @Override
-    public double perimetro() {
-        return baseMenor().comprimento() + baseMaior().comprimento() +
-                new SegmentoReta(super.getP1(), super.getP4()).comprimento()
-                + new SegmentoReta(super.getP2(), super.getP3()).comprimento();
-    }
+    
 }

@@ -33,12 +33,7 @@ public class Paralelogramo  extends Trapezio{
         return maiorX - menorX;
     }
 
-    @Override
-    public double perimetro() {
-        return baseMenor().comprimento() + baseMaior().comprimento() +
-                new SegmentoReta(super.getP1(), super.getP4()).comprimento()
-                + new SegmentoReta(super.getP2(), super.getP3()).comprimento();
-    }
+    
 
     
     public static boolean existe(Ponto p1, Ponto p2, Ponto p3, Ponto p4) {
