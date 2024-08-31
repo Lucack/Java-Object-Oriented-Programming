@@ -12,10 +12,6 @@ public class Paralelogramo  extends Trapezio{
         return ((baseMenor().comprimento() + baseMaior().comprimento()) * altura()) / 2;
     }
 
-    @Override
-    public double altura() {
-        return getP2().getCoordY() - getP3().getCoordY();
-    }
 
     @Override
     public double largura() {

@@ -24,10 +24,7 @@ public class Retangulo extends Paralelogramo {
         return altura() * largura();
     }
 
-    @Override
-    public double altura() {
-        return new SegmentoReta(getP1(), getP4()).comprimento();
-    }
+ 
 
 
 }

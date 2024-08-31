@@ -25,11 +25,8 @@ public abstract class Quadrilatero extends Poligono {
     }
 
     @Override
-    public double perimetro() {
-        double a = new SegmentoReta(getP1(), getP2()).comprimento();
-        double b = new SegmentoReta(getP2(), getP3()).comprimento();
-        double c = new SegmentoReta(getP3(), getP4()).comprimento();
-        double d = new SegmentoReta(getP4(), getP1()).comprimento();
-        return a+b+c+d;
+    public double altura() {
+        return Math.abs(getP1().getCoordY() - getP3().getCoordY());
     }
+
 }
