@@ -1,4 +1,4 @@
-package atividade05Formas2D;
+package main;
 
 public abstract class ObjetoGeometrico {
     
